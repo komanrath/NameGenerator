@@ -20,19 +20,69 @@ Need to define a function that takes month/day as input and spits out a name as 
 
 import sys
 
+First_name = [
+    "sly ",
+    "naughty ",
+    "impudent ",
+    "saucy ",
+    "wily ",
+    "hypnotic ",
+    "rascally ",
+    "roguish ",
+    "mischievous ",
+    "brazen ",
+    "cheeky ",
+    "disobedient "
+]
+
+Last_name = [
+    "dog",
+    "cat",
+    "elephant",
+    "giraffe",
+    "lion",
+    "tiger",
+    "penguin",
+    "koala",
+    "panda",
+    "cheetah",
+    "dolphin",
+    "whale",
+    "octopus",
+    "rhinoceros",
+    "kangaroo",
+    "hippopotamus",
+    "zebra",
+    "gazelle",
+    "platypus",
+    "crocodile",
+    "ostrich",
+    "armadillo",
+    "elephant seal",
+    "parrot",
+    "sloth",
+    "gorilla",
+    "polar bear",
+    "snake",
+    "chimpanzee",
+    "rhinoceros beetle"
+]
+
 print("hello, hello")
 print("come one, come all")
 print("today you will receive a new name; your true name")
+
 Start = input("are your ready to be reborn? * yes / no *  ")
 if Start == "yes":
    print("excellent, continue")
 else: 
    print("shame, you will never know your true name")
    sys.exit()
+
 Birth_Day = int(input("what day were you born? "))
 Birth_Month = int(input("what month were you born? "))
+
 Generate = input("Press enter for your new name")
 
-
-
+print("You will from now on, forever and always, be known as: " + First_name[Birth_Month - 1] + Last_name[Birth_Day - 1])
 
