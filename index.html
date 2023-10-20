@@ -9,15 +9,76 @@
 
 <body>
     <p>hello</p>
-    <p>today, you will receive a new name; this is your true name. don't forget it</p>
+    <p>today, you will receive a new name; this is your true name. don't forget it.</p>
     <form>
         <fieldset>
-            <legend>When were you born?</legend><br>
-            <input type="date" name="dateofbirth"><br><br>
-            <input type="submit" value="Click me, please. Yes, you. Here. Click Me.">
+            <legend>When were you born?</legend>
+            <p>Day: <input id="Day"></p>
+            <p>Month: <input id="Month"></p>
+            <input id="rename" type="submit" value="Click me, please. Yes, you. Here. Click Me.">
         </fieldset>
     </form>
-    <p>your new name is as follows:</p>
+    <script>
+        const Day = Number(document.getElementById("Day"));
+        const Month = Number(document.getElementById("Month"));
+        const rename = document.getElementById("rename");
+
+        const First_name = [
+            "sly ",
+            "naughty ",
+            "impudent ",
+            "saucy ",
+            "wily ",
+            "hypnotic ",
+            "rascally ",
+            "roguish ",
+            "mischievous ",
+            "brazen ",
+            "cheeky ",
+            "disobedient "
+        ];
+
+        const Last_name = [
+            "dog",
+            "cat",
+            "elephant",
+            "giraffe",
+            "lion",
+            "tiger",
+            "penguin",
+            "koala",
+            "panda",
+            "cheetah",
+            "dolphin",
+            "whale",
+            "octopus",
+            "rhinoceros",
+            "kangaroo",
+            "hippopotamus",
+            "zebra",
+            "gazelle",
+            "platypus",
+            "crocodile",
+            "ostrich",
+            "armadillo",
+            "elephant seal",
+            "parrot",
+            "sloth",
+            "gorilla",
+            "polar bear",
+            "snake",
+            "chimpanzee",
+            "rhinoceros beetle"
+        ];
+
+        const newName = First_name[Month.value - 1] + Last_name[Day.value - 1];
+        
+        rename.onclick = () => {
+            alert(`Your new name, from now until forever, is: ${newName}`);
+        }
+
+    </script>
+
 </body>
 
 </html>
