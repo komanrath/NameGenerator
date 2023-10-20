@@ -19,8 +19,8 @@
         </fieldset>
     </form>
     <script>
-        const Day = Number(document.getElementById("Day"));
-        const Month = Number(document.getElementById("Month"));
+        const Day = document.getElementById("Day");
+        const Month = document.getElementById("Month");
         const rename = document.getElementById("rename");
 
         const First_name = [
@@ -70,10 +70,9 @@
             "chimpanzee",
             "rhinoceros beetle"
         ];
-
-        const newName = First_name[Month.value - 1] + Last_name[Day.value - 1];
         
         rename.onclick = () => {
+            const newName = (First_name[Number(Month.value) - 1] + Last_name[Number(Day.value) - 1]);
             alert(`Your new name, from now until forever, is: ${newName}`);
         }
 
