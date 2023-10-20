@@ -1,4 +1,10 @@
+body {
+    background-color: rgb(190, 206, 139);
+    font-family: 'Oswald', sans-serif;
+} 
 
-
-
+input {
+    background-color: antiquewhite;
+    font-family: 'Oswald', sans-serif;
+}
 
