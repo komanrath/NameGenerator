@@ -26,6 +26,7 @@
         const Day = document.getElementById("Day");
         const Month = document.getElementById("Month");
         const rename = document.getElementById("rename");
+        const regex = /[^0-9]/
 
         const First_name = [
             "sly ",
@@ -86,7 +87,7 @@
                 alert("Oops, where's the month?");
             } else if (Month.value == "") {
                 alert("Oops, where's the month?");
-            }  else if (Day.value || Month.value  == String) {
+            }  else if (regex.test(Day.value) || regex.test(Month.value)) {
                 alert("Number inputs only, please.");
             } else {
                 const newName = (First_name[Number(Month.value) - 1] + Last_name[Number(Day.value) - 1]);
