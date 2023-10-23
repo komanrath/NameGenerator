@@ -78,15 +78,16 @@
         rename.onclick = () => {
             if (Day.value > 31 || Day.value < 0) {
                 alert("Pshh, that's not a valid calendar day. Try again.");
-            }
-            else if (Day.value == "") {
+            } else if (Day.value == "") {
                 alert("Oops, I think you forgot to input a day.");
-            }
-            else if (Month.value > 12 || Month.value < 0) {
+            } else if (Month.value > 12 || Month.value < 0) {
                 alert("Sneaky, sneaky. That's not a valid calendar month! Try again.");
-            } 
-            else if (Month.value == "") {
+            } else if (Month.value == "") {
                 alert("Oops, where's the month?");
+            } else if (Month.value == "") {
+                alert("Oops, where's the month?");
+            }  else if (Day.value || Month.value  == String) {
+                alert("Number inputs only, please.");
             } else {
                 const newName = (First_name[Number(Month.value) - 1] + Last_name[Number(Day.value) - 1]);
                 alert(`Your new name, from now until forever, is: ${newName}`);
